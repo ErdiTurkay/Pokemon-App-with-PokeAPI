@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.pokedetail.PokeDetailFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/flexible.example.appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/flexible.example.collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:title="@string/flexible_title"
+            app:expandedTitleMarginBottom="94dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:expandedTitleTextAppearance="@style/CollapsingTextAppearance.Inverse"
+            app:contentScrim="?colorPrimary"
+            >
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/london_flat"
+                android:tint="#BB3E50B4"
+                android:scaleType="centerCrop"
+                tools:ignore="UseAppTint"
+                android:contentDescription="@string/pokemon_image"
+                />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/flexible.example.toolbar"
+                style="@style/ToolBarWithNavigationBack"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@null"
+                app:layout_collapseMode="pin"
+                />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:behavior_overlapTop="78dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/flexible.example.cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentPaddingBottom="16dp"
+                app:contentPaddingLeft="16dp"
+                app:contentPaddingRight="16dp"
+                app:cardCornerRadius="4dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardElevation="4dp"
+                android:layout_margin="8dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_header"
+                        android:textAppearance="@style/TextAppearance.Header"
+                        style="@style/TextComponent.ItemRow"
+                        />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/base_experience_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="4dp"
+                        app:cardCornerRadius="10dp"
+                        >
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="10dp"
+                            >
+
+                            <ImageView
+                                android:id="@+id/poke_detail_base_experience_icon"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:src="@drawable/experience"
+                                android:contentDescription="@string/base_experience_icon"
+                                />
+
+                            <TextView
+                                android:id="@+id/poke_detail_base_experience_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/poke_detail_base_experience_icon"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/base_experience"
+                                android:textSize="18sp"
+                                android:textColor="@color/purple_700"
+                                android:fontFamily="@font/lemonmilk"
+                                android:textAppearance="?attr/textAppearanceHeadline6"
+                                />
+
+                            <TextView
+                                android:id="@+id/poke_detail_base_experience"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintStart_toEndOf="@+id/poke_detail_base_experience_text"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:fontFamily="@font/lemonmilk"
+                                android:layout_marginStart="10dp"
+                                android:textSize="18sp"
+                                />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/height_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="4dp"
+                        app:cardCornerRadius="10dp"
+                        >
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="10dp"
+                            >
+
+                            <ImageView
+                                android:id="@+id/poke_detail_height_icon"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:src="@drawable/height"
+                                android:contentDescription="@string/height_icon"
+                                tools:ignore="HardcodedText"
+                                />
+
+                            <TextView
+                                android:id="@+id/poke_detail_height_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/poke_detail_height_icon"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/height"
+                                android:textSize="18sp"
+                                android:textColor="@color/purple_700"
+                                android:fontFamily="@font/lemonmilk"
+                                android:textAppearance="?attr/textAppearanceHeadline6"
+                                />
+
+                            <TextView
+                                android:id="@+id/poke_detail_height"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintStart_toEndOf="@+id/poke_detail_height_text"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:layout_marginStart="10dp"
+                                android:textSize="18sp"
+                                android:fontFamily="@font/lemonmilk"
+                                />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/weight_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="4dp"
+                        app:cardCornerRadius="10dp"
+                        >
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="10dp"
+                            >
+
+                            <ImageView
+                                android:id="@+id/poke_detail_weight_icon"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:src="@drawable/weight"
+                                android:contentDescription="@string/weight_icon"
+                                />
+
+                            <TextView
+                                android:id="@+id/poke_detail_weight_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/poke_detail_weight_icon"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/weight"
+                                android:textSize="18sp"
+                                android:fontFamily="@font/lemonmilk"
+                                android:textColor="@color/purple_700"
+                                android:textStyle="bold"
+                                android:textAppearance="?attr/textAppearanceHeadline6"
+                                />
+
+                            <TextView
+                                android:id="@+id/poke_detail_weight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintStart_toEndOf="@+id/poke_detail_weight_text"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:layout_marginStart="10dp"
+                                android:fontFamily="@font/lemonmilk"
+                                android:textSize="18sp"
+                                />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/go_to_wiki"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="32dp"
+        android:elevation="8dp"
+        android:src="@drawable/ic_baseline_info"
+        app:layout_anchor="@id/flexible.example.cardview"
+        app:layout_anchorGravity="top|right|end"
+        tools:ignore="RtlHardcoded"
+        android:contentDescription="@string/link_for_pokewiki"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

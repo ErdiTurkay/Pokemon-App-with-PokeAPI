@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Challenge3</string>
+    <string name="toolbar_text">Pokemon App</string>
+    <string name="text_header">DETAILS</string>
+    <string name="text_title">TITLE</string>
+    <string name="flexible_title">Flexible space</string>
+    <string name="next">NEXT</string>
+    <string name="previous">PREVIOUS</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="check_your_internet">Check your internet connection for more pokemon.</string>
+    <string name="splash_screen_image">Splash Screen Image</string>
+    <string name="link_for_pokewiki">Link for PokeWiki</string>
+    <string name="weight">WEIGHT:</string>
+    <string name="weight_icon">Weight Icon</string>
+    <string name="height">HEIGHT:</string>
+    <string name="base_experience">BASE EXPERIENCE:</string>
+    <string name="pokemon_image">Pokemon Image</string>
+    <string name="base_experience_icon">Base Experience Icon</string>
+    <string name="height_icon">Height Icon</string>
+</resources>
